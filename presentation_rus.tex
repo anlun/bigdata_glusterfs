@@ -22,55 +22,57 @@
 [GlusterFS]
 {GlusterFS}
 \author
-[Podkopaev Anton, Alexeyev Anton]
+[Подкопаев Антон, Алексеев Антон]
 {
-Podkopaev Anton, \texttt podkoav239@gmail.com\\
+Подкопаев Антон, \texttt podkoav239@gmail.com\\
 \and
-Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
+Алексеев Антон, \texttt anton.m.alexeyev@gmail.com
 }
 \institute[Computer Science Center]{Computer Science Center}
-\date [14-03-13]{14 march 2013}
+\date [14-03-13]{14 марта 2013}
 
 \begin{frame}[plain]
 	\titlepage
 \end{frame}
 
-\begin{frame}{Distributed File Systems}
+\begin{frame}{Распределенные файловые системы}
 	\begin{itemize}
-		\item Access from multiple hosts
+		\item Доступ с многих хостов
 		
-		\item Location transparency
+		\item Инкапсуляция расположения файлов
 		% A consistent name space exists encompassing local as well as remote files. The name of a file does not give its location.
 		
-		\item Replication, fault tolerance
+		\item Реплики и отказоустойчивость
 		% That is, when a limited number of nodes in a file system go offline, the system continues to work without any data loss.
 		
-		\item Concurrency
+		\item Параллельный доступ
 		% All clients have the same view of the state of the file system. This means that if one process is modifying a file, any other processes on the same system or remote systems that are accessing the files will see the modifications in a coherent manner.
 		
-		\item Scalability
+		\item Масштабируемость
 		% The file system should work well in small environments (1 machine, a dozen machines) and also scale gracefully to huge ones (hundreds through tens of thousands of systems).
 
 		%\item MapReduce
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Distributed File Systems. Main Components}
+\begin{frame}{Распределенные файловые системы. Основные компоненты}
 	\begin{itemize}
-		\item Client
-		\item Data server
-		\item Metadata server
+		\item Клиент
+		\item Сервер данных
+		\item Сервер метаданных
 	\end{itemize}
 	\pause
 	GlusterFS:
 
-	Metadata server < Data server
+	Сервер данных в том числе выполняет и функции сервера метаданных
 \end{frame}
 
 \begin{frame}{GlusterFS}
 	\begin{itemize}
-		\item Network/cluster filesystem written in user space
-		\item Scale up to petabytes of storage under a single mount point
+		% \item Network/cluster filesystem written in user space
+		% \item Scale up to petabytes of storage under a single mount point
+		\item Сетевая фаловая система, работающая в user space
+		\item До петабайт данных в одной точке монтирования
 	\end{itemize}
 	\begin{figure}[h]
 		\centering
@@ -82,11 +84,14 @@ Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
 % It can easily scale up to petabytes of storage which is available to user under a single mount point.
 \end{frame}
 
-\begin{frame}{Terms}
+\begin{frame}{Термины GlusterFS}
 	\begin{itemize}
-		\item Brick     % The brick is the storage filesystem that has been assigned to a volume.
-		\item Subvolume % A brick after being processed by at least one translator.
-		\item Volume    % The final share after it passes through all the translators.
+		% \item Brick     % The brick is the storage filesystem that has been assigned to a volume.
+		% \item Subvolume % A brick after being processed by at least one translator.
+		% \item Volume    % The final share after it passes through all the translators.
+
+		\item Brick           % The brick is the storage filesystem that has been assigned to a volume.
+		\item Логический диск % The final share after it passes through all the translators.
 
 		%\item Client
 		% The machine which mounts the volume (this may also be a server).
@@ -98,32 +103,33 @@ Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
 		% The configuration of translators (since GlusterFS 3.1) is managed through the gluster command line interface (cli), so you don't need to know in what order to graph the translators together.
 		% All the translators hooked together to perform a function is called a graph. 		
 
-		\item Trusted storage pool
+		% \item Trusted storage pool
+		\item Доверенные хранилища
 		% Before you can configure a GlusterFS volume, you must create a trusted storage pool consisting of the
 		% storage servers that provides bricks to a volume.
 		% A storage pool is a trusted network of storage servers. 
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Volume types}
+\begin{frame}{Типы логических дисков}
 	\begin{itemize}
-		\item Distributed
-		\item Replicated
-		\item Striped
+		\item Распределеные
+		\item Реплицируемые
+		\item Разделяющие
 		\vspace{1cm}
-		\item Distributed striped
-		\item Distributed replicated
-		\item Striped replicated
+		\item Распределенные разделяющие
+		\item Распределенные реплицируемые
+		\item Разделяющие реплицируемые
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Distributed volumes}
+\begin{frame}{Распределенные логические диски (1)}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{distributed.png}
 	\end{figure}
 	% \begin{block}{}
-	% 	gluster volume create test-volume server1:/exp1 server2:/exp2
+		% gluster volume create test-volume server1:/exp1 server2:/exp2
 	% \end{block}
 
 	% The server that the files are written to is calculated by hashing the filename.
@@ -131,25 +137,28 @@ Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
 	% code would point to, telling the distribute translator which server the file is actually on.
 \end{frame}
 
-\begin{frame}{Distributed volumes. Pros and Cons}
-	\begin{block}{Advantages}
+\begin{frame}{Распределенные логические диски (2)}
+	\begin{block}{Плюсы}
 		\begin{itemize}
-			\item More servers - better scaling
+			% \item More servers - better scaling
+			\item Больше серверов => выше производительность при параллельном доступе
 			% in terms of random file access. As long as clients aren't all retrieving the same file,
 			% their access should be spread pretty evenly across all the servers.
-			\item Increasing volume - adding a new server % on-the-fly
+
+			% \item Increasing volume - adding a new server % on-the-fly
+			\item Увеличение диска = добавление сервера (можно во время работы) % on-the-fly
 		\end{itemize}
 	\end{block}
-	\begin{block}{Disadvantages}
+	\begin{block}{Минусы}
 		\begin{itemize}
-			\item Lose of one server - lose access to all its files
-			\item File can't be large than subvolume
-			\item Filename change -> hashcode not valid -> extra lookup
+			\item Потеря сервера = потеря данных на нем
+			\item Файл не может быть больше размера узла
+			\item Смена имени файла => дополнительное время на lookup
 		\end{itemize}
 	\end{block}
 \end{frame}
 
-\begin{frame}{Replicated volumes}
+\begin{frame}{Реплицируемые логические диски}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{replicated.png}
@@ -159,7 +168,7 @@ Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
 	% \end{block}
 \end{frame}
 
-\begin{frame}{Striped volumes}
+\begin{frame}{Разделяющие логические диски}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{striped.png}
@@ -169,68 +178,16 @@ Alexeyev Anton, \texttt anton.m.alexeyev@gmail.com
 	% \end{block}
 \end{frame}
 
-\begin{frame}{Setting up (1)}
-	\inputminted{bash}{sc1}
+\begin{frame}{Запуск GlusterFS}
 	\inputminted{bash}{sc2}
-\end{frame}	
-
-\begin{frame}{Setting up (2)}
+	\pause
+	\inputminted{bash}{sc1}
+	\pause
 	\inputminted{bash}{sc3}
 \end{frame}
 
-\begin{frame}{Performance (1)}
-	cat /mnt/Files/example > /dev/null
-	700mb
-	\begin{block}{NFS}
-		0m15.220s
-
-		0m16.139s
-		
-		0m18.812s
-	\end{block}
-	\begin{block}{GlusterFS}		
-		0m28.101s
-
-		0m20.321s
-
-		0m36.444s
-	\end{block}
-\end{frame}
-
-\begin{frame}{Performance (2)}
-	700 little files, copying
-	\begin{block}{NFS}
-		0m15.848s
-
-		0m12.792s
-
-		0m13.417s
-	\end{block}
-	\begin{block}{GlusterFS}
-		0m28.318s
-
-		0m27.432s
-
-		0m29.397s
-	\end{block}
-\end{frame}
-
-\begin{frame}{Performance (3)}
-	700 little files, removing
-	\begin{block}{NFS}
-		0m4.861s
-
-		0m3.618s
-
-		0m4.297s
-	\end{block}
-	\begin{block}{GlusterFS}
-		0m5.050s
-
-		0m7.055s
-
-		0m5.300s
-	\end{block}
+\begin{frame}{Производительность GlusterFS}
+	asdsa
 \end{frame}
 
 \begin{frame}{Links}
