@@ -178,12 +178,30 @@
 	% \end{block}
 \end{frame}
 
-\begin{frame}{Запуск GlusterFS}
-	\inputminted{bash}{sc2}
+\begin{frame}{Запуск GlusterFS (1)}
+	\begin{block}{}
+		\inputminted{bash}{sc2}
+	\end{block}
 	\pause
-	\inputminted{bash}{sc1}
+	\begin{block}{}
+		\inputminted{bash}{sc1}
+	\end{block}
 	\pause
-	\inputminted{bash}{sc3}
+	\begin{block}{}
+		\inputminted{bash}{sc3}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Запуск GlusterFS (2)}
+	\begin{block}{Распределенные}
+		gluster volume create test-volume server1:/exp1 server2:/exp2
+	\end{block}
+	\begin{block}{Реплицируемые}
+		gluster volume create test-volume replica 2 server1:/exp1 server2:/exp2
+	\end{block}
+	\begin{block}{Разделяющие}
+		gluster volume create test-volume stripe 2 server1:/exp1 server2:/exp2
+	\end{block}
 \end{frame}
 
 \begin{frame}{Производительность GlusterFS}
