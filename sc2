@@ -1,0 +1,3 @@
+apt-get install glusterfs-server
+service glusterfs-server start
+service glusterfs-server status

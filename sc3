@@ -1,0 +1,9 @@
+gluster peer probe 192.168.1.105
+gluster volume create gv0 replica 2
+	192.168.1.114:/home/us1/gluster_disk
+	192.168.1.105:/home/us2/gluster_disk
+
+gluster volume start gv0
+gluster volume info
+
+mount -t glusterfs 192.168.1.105:/gv1 /mnt

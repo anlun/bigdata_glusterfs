@@ -1,0 +1,2 @@
+mkfs.xfs disk-image
+mount disk-image gluster_disk
