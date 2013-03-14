@@ -256,7 +256,7 @@
 \begin{frame}{Рычажки}
 	\begin{block}{}
 		\begin{tabular}{ p{6cm} p{5cm} }
-			\textbf{cluster.data-self-heal-algorithm} & тип self-heal: full (копирование всего файла), diff (копирование только несинхронизированных блоков), reset (если файла нет --- полное копирование, если размер файла близок к размеру страницы диска --- чтение несколькими операциями) \\
+			\textbf{cluster.data-self-heal-algorithm} & тип self-heal: full (копирование всего файла), diff (копирование только несинхронизированных блоков), reset (если файла нет --- полное копирование, если размер файла близок к размеру страницы диска --- чтение несколькими операциями)
 		\end{tabular}
 	\end{block}
 \end{frame}
@@ -272,7 +272,6 @@
 			\textbf{diagnostics.client-log-level} & уровень логов клиентов \\
 %			\textbf{diagnostics.latency-measurement} & статистика латентности каждой операции (on/off) \\ %LOLWUT
 			\textbf{diagnostic.dump-fd-stats} & статистика по операциям над файлами (on/off) \\
-		\end{tabular}	
 	\end{block}
 \end{frame}
 
