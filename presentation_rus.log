@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.3.14)  14 MAR 2013 17:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.3.14)  14 MAR 2013 18:36
 entering extended mode
  %&-line parsing enabled.
 **presentation_rus.tex
@@ -1429,34 +1429,8 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [11
 
  <./striped.png (PNG copy)>]
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc2} \end {block} \...
-l.194 \end{frame}
-                 
-? R
-OK, entering \nonstopmode...
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc1} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc3} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \vbox (4.95697pt too high) detected at line 207
+ []
 
 
 Overfull \hbox (86.20248pt too wide) has occurred while \output is active
@@ -1466,38 +1440,8 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [12
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc2} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc1} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc3} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \vbox (4.95697pt too high) detected at line 207
+ []
 
 
 Overfull \hbox (86.20248pt too wide) has occurred while \output is active
@@ -1507,38 +1451,8 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [13
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc2} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc1} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...gin {block}{} \inputminted 
-                                                  {bash}{sc3} \end {block} \...
-l.194 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \vbox (4.95697pt too high) detected at line 207
+ []
 
 
 Overfull \hbox (86.20248pt too wide) has occurred while \output is active
@@ -1611,43 +1525,43 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [23
 
 ]
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 253.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 266.
 
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 253
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 266
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 253
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 266
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 253.
+(Font)              <10.95> on input line 266.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 253.
+(Font)              <8> on input line 266.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 253.
-LaTeX Font Info:    Try loading font information for U+msa on input line 253.
+(Font)              <6> on input line 266.
+LaTeX Font Info:    Try loading font information for U+msa on input line 266.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 253.
+LaTeX Font Info:    Try loading font information for U+msb on input line 266.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `T2A/lmr/bx/n' undefined
-(Font)              using `T2A/lmr/m/n' instead on input line 253.
+(Font)              using `T2A/lmr/m/n' instead on input line 266.
 
 
 Overfull \hbox (86.20248pt too wide) has occurred while \output is active
@@ -1657,7 +1571,7 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [24
 
 ]
-Underfull \hbox (badness 3612) in paragraph at lines 261--261
+Underfull \hbox (badness 3612) in paragraph at lines 274--274
 \T2A/lmr/bx/n/10.95 (ес-ли фай-ла нет --- пол-
  []
 
@@ -1669,22 +1583,22 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 275--275
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []\T2A/lmr/bx/n/10.95 сколько про-цен-тов дис-ка
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 275--275
+Underfull \hbox (badness 6559) in paragraph at lines 288--288
 []\T2A/lmr/bx/n/10.95 включение / вы-клю-че-ние
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--275
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []\T2A/lmr/bx/n/10.95 уровень ло-гов bricks:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--275
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []\T2A/lmr/bx/n/10.95 статистика по опе-ра-ци-ям
  []
 
@@ -1696,13 +1610,18 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [26
 
 ]
-Underfull \hbox (badness 5475) in paragraph at lines 286--286
-[]\T2A/lmr/bx/n/10.95 объјм па-мя-ти, для каж-
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
+\T2A/lmr/bx/n/10.95 ди-рек-то-рии кэ-ши-ру-ет-ся;
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 286--286
-\T2A/lmr/bx/n/10.95 дой ди-рек-то-рии кэ-ши-ру-ет-
+Underfull \hbox (badness 4108) in paragraph at lines 299--299
+\T2A/lmr/bx/n/10.95 сти-мое вре-мя пре-бы-ва-ния
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 299--299
+\T2A/lmr/bx/n/10.95 лю-бой ди-рек-то-рии в кэ-ше
  []
 
 
@@ -1713,12 +1632,12 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [27
 
 ]
-Underfull \hbox (badness 1325) in paragraph at lines 297--297
+Underfull \hbox (badness 1325) in paragraph at lines 310--310
 []\T2A/lmr/bx/n/10.95 время ожи-да-ния кли-ен-том
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 297--297
+Underfull \hbox (badness 1394) in paragraph at lines 310--310
 \T2A/lmr/bx/n/10.95 ста-нов-ле-нии со-еди-не-ния ---
  []
 
@@ -1730,27 +1649,27 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
 []\T2A/lmr/bx/n/10.95 запрещать кли-ен-ту ком-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
 \T2A/lmr/bx/n/10.95 ми-тить, ес-ли про-изо-шјл
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 311--311
+Underfull \hbox (badness 2020) in paragraph at lines 324--324
 \T2A/lmr/bx/n/10.95 ми (на мо-мент от-ве-та не
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 311--311
+Underfull \hbox (badness 2894) in paragraph at lines 324--324
 \T2A/lmr/bx/n/10.95 га-ран-ти-ру-ет-ся, что за-пись
  []
 
 
-Overfull \vbox (5.6756pt too high) detected at line 311
+Overfull \vbox (5.6756pt too high) detected at line 324
  []
 
 
@@ -1761,22 +1680,22 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []\T2A/lmr/bx/n/10.95 разрешать со-еди-не-ния
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T2A/lmr/bx/n/10.95 непри-ви-ле-ги-ро-ван-ным хо-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T2A/lmr/bx/n/10.95 с неде-фолт-ным но-ме-ром
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []\T2A/lmr/bx/n/10.95 запретить экс-порт дис-ка
  []
 
@@ -1795,17 +1714,17 @@ Overfull \hbox (86.20248pt too wide) has occurred while \output is active
 [31
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 []\T2A/lmr/bx/n/10.95 разрешать со-еди-не-ния
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 \T2A/lmr/bx/n/10.95 непри-ви-ле-ги-ро-ван-ным хо-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 351--351
+Underfull \hbox (badness 1655) in paragraph at lines 364--364
 []\T2A/lmr/bx/n/10.95 время жиз-ни зам-ка по-сле
  []
 
@@ -1843,10 +1762,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17287 strings out of 494818
- 309304 string characters out of 1178666
+ 17286 strings out of 494818
+ 309293 string characters out of 1178666
  378671 words of memory out of 3000000
- 19893 multiletter control sequences out of 15000+50000
+ 19892 multiletter control sequences out of 15000+50000
  34813 words of font info for 42 fonts, out of 3000000 for 9000
  212 hyphenation exceptions out of 8191
  49i,16n,57p,480b,660s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1858,9 +1777,9 @@ lexeyev/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/alexeyev/.t
 exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk></usr/share/texmf/fonts/type1
 /public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on presentation_rus.pdf (33 pages, 644909 bytes).
+Output written on presentation_rus.pdf (33 pages, 644801 bytes).
 PDF statistics:
- 1204 PDF objects out of 1440 (max. 8388607)
+ 1200 PDF objects out of 1200 (max. 8388607)
  66 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

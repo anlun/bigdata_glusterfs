@@ -181,39 +181,52 @@
 
 \begin{frame}{Запуск GlusterFS (1)}
 	\begin{block}{}
-		\inputminted{bash}{sc2}
+		apt-get install glusterfs-server\\
+		service glusterfs-server start\\
+		service glusterfs-server status\\
 	\end{block}
 	\pause
 	\begin{block}{}
-		\inputminted{bash}{sc1}
+		mkfs.xfs disk-image\\
+		mount disk-image gluster\_disk\\
 	\end{block}
 	\pause
 	\begin{block}{}
-		\inputminted{bash}{sc3}
+		gluster peer probe 192.168.1.105\\
+		\vspace{1cm}
+		gluster volume create gv0 replica 2\\
+		            192.168.1.114:/home/us1/gluster\_disk\\
+		            192.168.1.105:/home/us2/gluster\_disk\\
+
+		\vspace{1cm}
+		gluster volume start gv0\\
+		gluster volume info\\
+
+		mount -t glusterfs 192.168.1.105:/gv1 /mnt
 	\end{block}
 \end{frame}
 
 \begin{frame}{Запуск GlusterFS (2)}
 	\begin{block}{Распределенные}
-		\$gluster volume create test-volume server1:/exp1 server2:/exp2
+		 gluster volume create test-volume server1:/exp1 server2:/exp2
 	\end{block}
 	\begin{block}{Реплицируемые}
-		\$gluster volume create test-volume replica 2 server1:/exp1 server2:/exp2
+		 gluster volume create test-volume replica 2 server1:/exp1 server2:/exp2
 	\end{block}
 	\begin{block}{Разделяющие}
-		\$gluster volume create test-volume stripe 2 server1:/exp1 server2:/exp2
+		 gluster volume create test-volume stripe 2 server1:/exp1 server2:/exp2
 	\end{block}
 \end{frame}
 
 \begin{frame}{Добавление серверов}
 	\begin{block}{} 
-		\$gluster peer probe new\_server
+		 gluster peer probe new\_server
 
 		\pause
-		\$gluster volume add-brick vol\_name new\_brick
+		 gluster volume add-brick vol\_name new\_brick
 
 		\pause
-		\$gluster volume info
+		 gluster volume info
 	\end{block}
 	\pause
 	\vspace{1cm}
@@ -222,22 +235,22 @@
 
 \begin{frame}{Удаление серверов}
 	\begin{block}{} 
-		\$gluster volume remove-brick vol\_name new\_brick start
+		 gluster volume remove-brick vol\_name new\_brick start
 
 		\pause
-		\$gluster volume remove-brick vol\_name new\_brick status
+		 gluster volume remove-brick vol\_name new\_brick status
 
 		\pause
-		\$gluster volume remove-brick vol\_name new\_brick commit
+		 gluster volume remove-brick vol\_name new\_brick commit
 	\end{block}
 \end{frame}
 
 \begin{frame}{Рычажки}
 	\begin{block}{Все настройки осуществляются так}
-		 \$gluster volume set vol\_name option param	
+		  gluster volume set vol\_name option param	
 	\end{block}
 	\begin{block}{Пример}
-		 \$gluster volume set myvolume performance.cache-size 256MB	
+		  gluster volume set myvolume performance.cache-size 256MB	
 	\end{block}
 \end{frame}
 
@@ -280,7 +293,7 @@
 		\begin{tabular}{ p{6cm} p{5cm} }
 			\textbf{feature.read-only} & монтирование диска в режиме read-only для всех клиентов (on/off)\\
 			\textbf{features.lock-heal} & self-healing замков при разрыве соединения (on/off)\\
-			\textbf{features.quota-timeout} & объём памяти, для каждой директории кэшируется; можно указать макс. допустимое время пребывания любой директории в кэше (0-3600 сек.) \\
+			\textbf{features.quota-timeout} & объём памяти для каждой директории кэшируется; можно указать макс. допустимое время пребывания любой директории в кэше (0-3600 сек.) \\
 		\end{tabular}
 	\end{block}
 \end{frame}
@@ -353,8 +366,8 @@
 \begin{frame}{Ссылки}
 	\begin{itemize}
 		\item \url{http://www.gluster.org/}
-		\item Взрослеем с GlusterFS \url{http://habrahabr.ru/post/140031/}
-		\item GlusterFS, опыт новой версии \url{http://habrahabr.ru/post/157029/}
+		% \item Взрослеем с GlusterFS \url{http://habrahabr.ru/post/140031/}
+		% \item GlusterFS, опыт новой версии \url{http://habrahabr.ru/post/157029/}
 	\end{itemize}
 \end{frame}
 
