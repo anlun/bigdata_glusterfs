@@ -204,6 +204,33 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{Добавление серверов}
+	\begin{block}{} 
+		gluster peer probe new\_server
+
+		\pause
+		gluster volume add-brick vol\_name new\_brick
+
+		\pause
+		gluster volume info
+	\end{block}
+	\pause
+	\vspace{1cm}
+	Для расширения реплицируемых (разделяющих) дисков надо добавлять количество серверов, кратное фактору реплики (разбиения)
+\end{frame}
+
+\begin{frame}{Удаление серверов}
+	\begin{block}{} 
+		gluster volume remove-brick vol\_name new\_brick start
+
+		\pause
+		gluster volume remove-brick vol\_name new\_brick status
+
+		\pause
+		gluster volume remove-brick vol\_name new\_brick commit
+	\end{block}
+\end{frame}
+
 \begin{frame}{Links}
 	\begin{itemize}
 		\item \url{http://www.gluster.org/}
