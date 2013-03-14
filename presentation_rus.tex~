@@ -13,7 +13,7 @@
 \usepackage{lmodern}
 \usepackage{color}
 % нафиг нужен minted?
-\usepackage{minted}
+%\usepackage{minted}
 
 \definecolor{links}{HTML}{2A1B81}
 \hypersetup{colorlinks,linkcolor=,urlcolor=links}
@@ -195,25 +195,25 @@
 
 \begin{frame}{Запуск GlusterFS (2)}
 	\begin{block}{Распределенные}
-		gluster volume create test-volume server1:/exp1 server2:/exp2
+		\$gluster volume create test-volume server1:/exp1 server2:/exp2
 	\end{block}
 	\begin{block}{Реплицируемые}
-		gluster volume create test-volume replica 2 server1:/exp1 server2:/exp2
+		\$gluster volume create test-volume replica 2 server1:/exp1 server2:/exp2
 	\end{block}
 	\begin{block}{Разделяющие}
-		gluster volume create test-volume stripe 2 server1:/exp1 server2:/exp2
+		\$gluster volume create test-volume stripe 2 server1:/exp1 server2:/exp2
 	\end{block}
 \end{frame}
 
 \begin{frame}{Добавление серверов}
 	\begin{block}{} 
-		gluster peer probe new\_server
+		\$gluster peer probe new\_server
 
 		\pause
-		gluster volume add-brick vol\_name new\_brick
+		\$gluster volume add-brick vol\_name new\_brick
 
 		\pause
-		gluster volume info
+		\$gluster volume info
 	\end{block}
 	\pause
 	\vspace{1cm}
@@ -222,41 +222,40 @@
 
 \begin{frame}{Удаление серверов}
 	\begin{block}{} 
-		gluster volume remove-brick vol\_name new\_brick start
+		\$gluster volume remove-brick vol\_name new\_brick start
 
 		\pause
-		gluster volume remove-brick vol\_name new\_brick status
+		\$gluster volume remove-brick vol\_name new\_brick status
 
 		\pause
-		gluster volume remove-brick vol\_name new\_brick commit
+		\$gluster volume remove-brick vol\_name new\_brick commit
 	\end{block}
 \end{frame}
 
 \begin{frame}{Рычажки}
 	\begin{block}{Все настройки осуществляются так}
-		 \$ gluster volume set <имя диска> <опция> <параметр>	
+		 \$gluster volume set vol\_name option param	
 	\end{block}
-	\begin{block}{}
-		 \$ gluster volume set myvolume performance.cache-size 256MB	
+	\begin{block}{Пример}
+		 \$gluster volume set myvolume performance.cache-size 256MB	
 	\end{block}
 \end{frame}
 
 \begin{frame}{Рычажки}
 	\begin{block}{}
 		\begin{tabular}{ p{6cm} p{5cm} }
-			\textbf{auth.allow} & IP-адреса клиентов, с джокерами: 192.168.1.* \\
+			\textbf{auth.allow} & IP-адреса клиентов, с джокерами: 192.168.1.\* \\
 			\textbf{auth.reject} &  IP-адреса заблокированных клиентов \\
 			\textbf{client.grace-timeout} & время жизни замков, поставленных клиентом, после разрыва соединения, в секундах (10--1800) \\
-			\textbf{cluster.self-heal-window-size} & максимальное число блоков в файле, для которых self-heal происходит одновременно (0-1025)
+			\textbf{cluster.self-heal-window-size} & максимальное число блоков в файле, для которых self-heal происходит одновременно (0-1025)\\
 		\end{tabular}
 	\end{block}
 \end{frame}
 
-
 \begin{frame}{Рычажки}
 	\begin{block}{}
 		\begin{tabular}{ p{6cm} p{5cm} }
-			\textbf{cluster.data-self-heal-algorithm} & тип self-heal: full (копирование всего файла), diff (копирование только несинхронизированных блоков), reset (если файла нет --- полное копирование, если размер файла близок к размеру страницы диска --- чтение несколькими операциями)
+			\textbf{cluster.data-self-heal-algorithm} & тип self-heal: full (копирование всего файла), diff (копирование только несинхронизированных блоков), reset (если файла нет --- полное копирование, если размер файла близок к размеру страницы диска --- чтение несколькими операциями) \\
 		\end{tabular}
 	\end{block}
 \end{frame}
@@ -270,8 +269,8 @@
 			\textbf{cluster.self-heal-daemon} & включение / выключение фонового self-heal на репликах (on/off) \\
 			\textbf{diagnostics.brick-log-level} & уровень логов bricks: INFO, DEBUG, WARNING, ERROR, CRITICAL, NONE, TRACE \\
 			\textbf{diagnostics.client-log-level} & уровень логов клиентов \\
-%			\textbf{diagnostics.latency-measurement} & статистика латентности каждой операции (on/off) \\ %LOLWUT
 			\textbf{diagnostic.dump-fd-stats} & статистика по операциям над файлами (on/off) \\
+		\end{tabular}	
 	\end{block}
 \end{frame}
 
